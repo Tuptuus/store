@@ -1,0 +1,130 @@
+.Header {
+  z-index: 10;
+  position: absolute;
+  background-color: #1f1f22;
+  width: 100%;
+  height: 100px;
+  color: #13a79f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Header__Logo {
+  width: 20%;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 28px;
+  padding-left: 50px;
+}
+
+.Header__Logo__TopLogo {
+  width: 70px;
+  color: #13a79f;
+  cursor: pointer;
+}
+
+.Header__Logo__BottomLogo {
+  width: 70px;
+  cursor: pointer;
+}
+
+.Header__Search {
+  background-color: #525252;
+  height: 50px;
+  border-radius: 10px;
+  width: 55%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Header__Search__Icon {
+  color: white;
+  font-size: 24px;
+  padding-left: 20px;
+}
+
+.Header__Search__Input {
+  font-size: 20px;
+  background-color: transparent;
+  margin-left: 20px;
+  height: 30px;
+  width: 75%;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.Header__Search__Input::-webkit-input-placeholder {
+  color: white;
+}
+
+.Header__Search__Input:-ms-input-placeholder {
+  color: white;
+}
+
+.Header__Search__Input::-ms-input-placeholder {
+  color: white;
+}
+
+.Header__Search__Input::placeholder {
+  color: white;
+}
+
+.Header__Search--search {
+  background-color: #13a79f;
+  color: white;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.Header__Right {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  color: white;
+  font-size: 30px;
+}
+
+.Header__Right__User {
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.Header__Right__Trolley {
+  cursor: pointer;
+}
+/*# sourceMappingURL=header.css.map */

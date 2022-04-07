@@ -1,0 +1,83 @@
+$base-color: #1f1f22;
+$second-color: #13a79f;
+
+.Header {
+  z-index: 10;
+  position: absolute;
+  background-color: $base-color;
+  width: 100%;
+  height: 100px;
+  color: $second-color;
+  display: flex;
+  align-items: center;
+  &__Logo {
+    width: 20%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+    padding-left: 50px;
+    &__TopLogo {
+      width: 70px;
+      color: $second-color;
+      cursor: pointer;
+    }
+    &__BottomLogo {
+      width: 70px;
+      cursor: pointer;
+    }
+  }
+  &__Search {
+    background-color: #525252;
+    height: 50px;
+    border-radius: 10px;
+    width: 55%;
+    display: flex;
+    align-items: center;
+    &__Icon {
+      color: white;
+      font-size: 24px;
+      padding-left: 20px;
+    }
+    &__Input {
+      font-size: 20px;
+      background-color: transparent;
+      margin-left: 20px;
+      height: 30px;
+      width: 75%;
+      color: white;
+      border: none;
+      outline: none;
+    }
+    &__Input::placeholder {
+      color: white;
+    }
+    &--search {
+      background-color: $second-color;
+      color: white;
+      width: 100px;
+      height: 40px;
+      border-radius: 10px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+  &__Right {
+    width: 20%;
+    display: flex;
+    justify-content: right;
+    color: white;
+    font-size: 30px;
+    &__User {
+      margin-left: 50px;
+      cursor: pointer;
+    }
+    &__Trolley {
+      cursor: pointer;
+    }
+  }
+}
