@@ -33,82 +33,106 @@ function LeftMenu() {
     <div className="LeftMenu">
       <ul className="LeftMenu__MenuList">
         <li onClick={() => selectedCategory("Mobiles")}>
-          <div
-            className={`LeftMenu__MenuList__Item ${
-              currentCategory === "Mobiles" ? "SelectedCategory" : null
-            }`}
-          >
-            <span>{Mobile}</span>Mobile Phones{" "}
+          <div className={"LeftMenu__MenuList__Container"}>
+            <div className="LeftMenu__MenuList__Container__Item">
+              <span>{Mobile} Mobile Phones</span>
+              <span
+                className={`LeftMenu__MenuList__Container__Underline ${
+                  currentCategory === "Mobiles" ? "UnderlineOn" : null
+                }`}
+              ></span>
+            </div>
           </div>
           <div className="LeftMenu__MenuList__Arrow">{Arrow}</div>
         </li>
         <li onClick={() => selectedCategory("Laptops")}>
-          <div
-            className={`LeftMenu__MenuList__Item ${
-              currentCategory === "Laptops" ? "SelectedCategory" : null
-            }`}
-          >
-            <span>{Laptop}</span>Laptops
+          <div className={"LeftMenu__MenuList__Container"}>
+            <div className="LeftMenu__MenuList__Container__Item">
+              <span>{Laptop} Laptops</span>
+              <span
+                className={`LeftMenu__MenuList__Container__Underline ${
+                  currentCategory === "Laptops" ? "UnderlineOn" : null
+                }`}
+              ></span>
+            </div>
           </div>
           <div className="LeftMenu__MenuList__Arrow">{Arrow}</div>
         </li>
         <li onClick={() => selectedCategory("Tablets")}>
-          <div
-            className={`LeftMenu__MenuList__Item ${
-              currentCategory === "Tablets" ? "SelectedCategory" : null
-            }`}
-          >
-            <span>{Tablet}</span>Tablets
-          </div>
-          <div className="LeftMenu__MenuList__Arrow">{Arrow}</div>
-        </li>
-        <li onClick={() => selectedCategory("Television")}>
-          <div
-            className={`LeftMenu__MenuList__Item ${
-              currentCategory === "Television" ? "SelectedCategory" : null
-            }`}
-          >
-            <span>{Television}</span>Television
-          </div>
-          <div className="LeftMenu__MenuList__Arrow">{Arrow}</div>
-        </li>
-        <li onClick={() => selectedCategory("Network")}>
-          <div
-            className={`LeftMenu__MenuList__Item ${
-              currentCategory === "Network" ? "SelectedCategory" : null
-            }`}
-          >
-            <span>{Wifi}</span>Networking Products
-          </div>
-          <div className="LeftMenu__MenuList__Arrow">{Arrow}</div>
-        </li>
-        <li onClick={() => selectedCategory("Accessories")}>
-          <div
-            className={`LeftMenu__MenuList__Item ${
-              currentCategory === "Accessories" ? "SelectedCategory" : null
-            }`}
-          >
-            <span>{Headphones}</span>Accesories
+          <div className={"LeftMenu__MenuList__Container"}>
+            <div className="LeftMenu__MenuList__Container__Item">
+              <span>{Tablet} Tablets</span>
+              <span
+                className={`LeftMenu__MenuList__Container__Underline ${
+                  currentCategory === "Tablets" ? "UnderlineOn" : null
+                }`}
+              ></span>
+            </div>
           </div>
           <div className="LeftMenu__MenuList__Arrow">{Arrow}</div>
         </li>
         <li onClick={() => selectedCategory("Computer")}>
-          <div
-            className={`LeftMenu__MenuList__Item ${
-              currentCategory === "Computer" ? "SelectedCategory" : null
-            }`}
-          >
-            <span>{Computer}</span>Computer Accessories
+          <div className={"LeftMenu__MenuList__Container"}>
+            <div className="LeftMenu__MenuList__Container__Item">
+              <span>{Computer} Computer Accessories</span>
+              <span
+                className={`LeftMenu__MenuList__Container__Underline ${
+                  currentCategory === "Computer" ? "UnderlineOn" : null
+                }`}
+              ></span>
+            </div>
+          </div>
+          <div className="LeftMenu__MenuList__Arrow">{Arrow}</div>
+        </li>
+        <li onClick={() => selectedCategory("Television")}>
+          <div className={"LeftMenu__MenuList__Container"}>
+            <div className="LeftMenu__MenuList__Container__Item">
+              <span>{Television} Television</span>
+              <span
+                className={`LeftMenu__MenuList__Container__Underline ${
+                  currentCategory === "Television" ? "UnderlineOn" : null
+                }`}
+              ></span>
+            </div>
+          </div>
+          <div className="LeftMenu__MenuList__Arrow">{Arrow}</div>
+        </li>
+        <li onClick={() => selectedCategory("Network")}>
+          <div className={"LeftMenu__MenuList__Container"}>
+            <div className="LeftMenu__MenuList__Container__Item">
+              <span>{Wifi} Networking Products</span>
+              <span
+                className={`LeftMenu__MenuList__Container__Underline ${
+                  currentCategory === "Network" ? "UnderlineOn" : null
+                }`}
+              ></span>
+            </div>
+          </div>
+          <div className="LeftMenu__MenuList__Arrow">{Arrow}</div>
+        </li>
+        <li onClick={() => selectedCategory("Accessories")}>
+          <div className={"LeftMenu__MenuList__Container"}>
+            <div className="LeftMenu__MenuList__Container__Item">
+              <span>{Headphones} Accessories</span>
+              <span
+                className={`LeftMenu__MenuList__Container__Underline ${
+                  currentCategory === "Accessories" ? "UnderlineOn" : null
+                }`}
+              ></span>
+            </div>
           </div>
           <div className="LeftMenu__MenuList__Arrow">{Arrow}</div>
         </li>
         <li onClick={() => selectedCategory("Gaming")}>
-          <div
-            className={`LeftMenu__MenuList__Item ${
-              currentCategory === "Gaming" ? "SelectedCategory" : null
-            }`}
-          >
-            <span>{Gamepad}</span>Gaming Zone
+          <div className={"LeftMenu__MenuList__Container"}>
+            <div className="LeftMenu__MenuList__Container__Item">
+              <span>{Gamepad} Gaming Zone</span>
+              <span
+                className={`LeftMenu__MenuList__Container__Underline ${
+                  currentCategory === "Gaming" ? "UnderlineOn" : null
+                }`}
+              ></span>
+            </div>
           </div>
           <div className="LeftMenu__MenuList__Arrow">{Arrow}</div>
         </li>

@@ -1,16 +1,15 @@
 import React from "react";
-import Header from "../components/header/Header";
 import "../components/header/Header.css";
-import LeftMenu from "../components/LeftMenu/LeftMenu";
 import "./App.css";
+import MainPage from "../components/MainPage/MainPage";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <div className="Bottom">
-        <LeftMenu />
-      </div>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+      </Routes>
     </div>
   );
 }
