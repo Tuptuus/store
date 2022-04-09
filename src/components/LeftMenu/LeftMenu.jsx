@@ -43,7 +43,13 @@ function LeftMenu() {
               ></span>
             </div>
           </div>
-          <div className="LeftMenu__MenuList__Arrow">{Arrow}</div>
+          <div
+            className={`LeftMenu__MenuList__Arrow ${
+              currentCategory === "Mobiles" ? "ArrowOn" : null
+            }`}
+          >
+            {Arrow}
+          </div>
         </li>
         <li onClick={() => selectedCategory("Laptops")}>
           <div className={"LeftMenu__MenuList__Container"}>
@@ -56,7 +62,13 @@ function LeftMenu() {
               ></span>
             </div>
           </div>
-          <div className="LeftMenu__MenuList__Arrow">{Arrow}</div>
+          <div
+            className={`LeftMenu__MenuList__Arrow ${
+              currentCategory === "Laptops" ? "ArrowOn" : null
+            }`}
+          >
+            {Arrow}
+          </div>
         </li>
         <li onClick={() => selectedCategory("Tablets")}>
           <div className={"LeftMenu__MenuList__Container"}>
@@ -69,7 +81,13 @@ function LeftMenu() {
               ></span>
             </div>
           </div>
-          <div className="LeftMenu__MenuList__Arrow">{Arrow}</div>
+          <div
+            className={`LeftMenu__MenuList__Arrow ${
+              currentCategory === "Tablets" ? "ArrowOn" : null
+            }`}
+          >
+            {Arrow}
+          </div>
         </li>
         <li onClick={() => selectedCategory("Computer")}>
           <div className={"LeftMenu__MenuList__Container"}>
@@ -82,7 +100,13 @@ function LeftMenu() {
               ></span>
             </div>
           </div>
-          <div className="LeftMenu__MenuList__Arrow">{Arrow}</div>
+          <div
+            className={`LeftMenu__MenuList__Arrow ${
+              currentCategory === "Computer" ? "ArrowOn" : null
+            }`}
+          >
+            {Arrow}
+          </div>
         </li>
         <li onClick={() => selectedCategory("Television")}>
           <div className={"LeftMenu__MenuList__Container"}>
@@ -95,7 +119,13 @@ function LeftMenu() {
               ></span>
             </div>
           </div>
-          <div className="LeftMenu__MenuList__Arrow">{Arrow}</div>
+          <div
+            className={`LeftMenu__MenuList__Arrow ${
+              currentCategory === "Television" ? "ArrowOn" : null
+            }`}
+          >
+            {Arrow}
+          </div>
         </li>
         <li onClick={() => selectedCategory("Network")}>
           <div className={"LeftMenu__MenuList__Container"}>
@@ -108,7 +138,13 @@ function LeftMenu() {
               ></span>
             </div>
           </div>
-          <div className="LeftMenu__MenuList__Arrow">{Arrow}</div>
+          <div
+            className={`LeftMenu__MenuList__Arrow ${
+              currentCategory === "Network" ? "ArrowOn" : null
+            }`}
+          >
+            {Arrow}
+          </div>
         </li>
         <li onClick={() => selectedCategory("Accessories")}>
           <div className={"LeftMenu__MenuList__Container"}>
@@ -121,7 +157,13 @@ function LeftMenu() {
               ></span>
             </div>
           </div>
-          <div className="LeftMenu__MenuList__Arrow">{Arrow}</div>
+          <div
+            className={`LeftMenu__MenuList__Arrow ${
+              currentCategory === "Accessories" ? "ArrowOn" : null
+            }`}
+          >
+            {Arrow}
+          </div>
         </li>
         <li onClick={() => selectedCategory("Gaming")}>
           <div className={"LeftMenu__MenuList__Container"}>
@@ -134,7 +176,13 @@ function LeftMenu() {
               ></span>
             </div>
           </div>
-          <div className="LeftMenu__MenuList__Arrow">{Arrow}</div>
+          <div
+            className={`LeftMenu__MenuList__Arrow ${
+              currentCategory === "Gaming" ? "ArrowOn" : null
+            }`}
+          >
+            {Arrow}
+          </div>
         </li>
       </ul>
     </div>

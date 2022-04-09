@@ -1,0 +1,27 @@
+.BottomContainer {
+  background-color: lightblue;
+  width: 80%;
+  height: 200px;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.BottomContainer__Block {
+  background-color: yellow;
+  margin-left: 2.5%;
+  width: 30%;
+  max-width: 380px;
+}
+
+.BottomContainer__Block img {
+  width: 100%;
+}
+/*# sourceMappingURL=BottomAds.css.map */

@@ -1,0 +1,18 @@
+.BottomContainer {
+  background-color: lightblue;
+  width: 80%;
+  height: 200px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__Block {
+    background-color: yellow;
+    margin-left: 2.5%;
+    width: 30%;
+    max-width: 380px;
+    img {
+      width: 100%;
+    }
+  }
+}
