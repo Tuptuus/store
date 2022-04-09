@@ -1,6 +1,23 @@
 .TopContainer {
-  background-color: red;
   width: 80%;
-  height: 500px;
+  height: 60%;
+  max-width: 1280px;
+  max-height: 520px;
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.TopContainer__Slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.TopContainer__Slider__Slide img {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
 }
 /*# sourceMappingURL=TopAd.css.map */

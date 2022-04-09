@@ -13,6 +13,28 @@ function RightComponent() {
         <BottomAds />
       </div>
     );
+  } else if (location.pathname === "/MobilePhones") {
+    return <div className="RightComponentMobile">mobile phones</div>;
+  } else if (location.pathname === "/Laptops") {
+    return <div className="RightComponentLaptops">laptops</div>;
+  } else if (location.pathname === "/Tablets") {
+    return <div className="RightComponentTablets">tablets</div>;
+  } else if (location.pathname === "/ComputerAccessories") {
+    return (
+      <div className="RightComponentComputerAccessories">
+        computer accessories
+      </div>
+    );
+  } else if (location.pathname === "/Television") {
+    return <div className="RightComponentTelevision">television</div>;
+  } else if (location.pathname === "/NetworkProducts") {
+    return (
+      <div className="RightComponentNetworkProducts">network products</div>
+    );
+  } else if (location.pathname === "/Accessories") {
+    return <div className="RightComponentAccessories">accessories</div>;
+  } else if (location.pathname === "/GamingZone") {
+    return <div className="RightComponentGamingZone">gaming zone</div>;
   }
 }
 

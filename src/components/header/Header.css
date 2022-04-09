@@ -1,7 +1,7 @@
 .Header {
   background-color: #1f1f22;
-  width: 100%;
-  height: 100px;
+  min-width: 100%;
+  min-height: 10vh;
   color: #13a79f;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -104,6 +104,12 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.Header__Search--search:hover {
+  background-color: #098882;
 }
 
 .Header__Right {
@@ -119,11 +125,23 @@
 }
 
 .Header__Right__User {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   margin-left: 50px;
   cursor: pointer;
 }
 
 .Header__Right__Trolley {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   cursor: pointer;
+}
+
+.Header__Right__User:hover {
+  color: #13a79f;
+}
+
+.Header__Right__Trolley:hover {
+  color: #13a79f;
 }
 /*# sourceMappingURL=Header.css.map */

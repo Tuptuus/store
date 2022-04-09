@@ -11,8 +11,16 @@ function App() {
       <Routes>
         <Route path="/">
           <Route index element={<MainPage />} />
-          <Route path="adminpanel" element={<AdminPanel />} />
           <Route path="e" element={<MainPage />} />
+          <Route path="MobilePhones" element={<MainPage />} />
+          <Route path="Laptops" element={<MainPage />} />
+          <Route path="Tablets" element={<MainPage />} />
+          <Route path="ComputerAccessories" element={<MainPage />} />
+          <Route path="Television" element={<MainPage />} />
+          <Route path="NetworkProducts" element={<MainPage />} />
+          <Route path="Accessories" element={<MainPage />} />
+          <Route path="GamingZone" element={<MainPage />} />
+          <Route path="adminpanel" element={<AdminPanel />} />
         </Route>
       </Routes>
     </div>

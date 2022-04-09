@@ -12,6 +12,7 @@ import {
   faWifi,
   faAngleRight,
 } from "@fortawesome/free-solid-svg-icons";
+import { useLocation } from "react-router-dom";
 
 const Mobile = <FontAwesomeIcon icon={faMobile} />;
 const Laptop = <FontAwesomeIcon icon={faLaptop} />;
@@ -23,162 +24,162 @@ const Gamepad = <FontAwesomeIcon icon={faGamepad} />;
 const Wifi = <FontAwesomeIcon icon={faWifi} />;
 const Arrow = <FontAwesomeIcon icon={faAngleRight} />;
 
-function LeftMenu() {
-  const [currentCategory, setCurrentCategory] = useState("");
-  const selectedCategory = (category) => {
-    setCurrentCategory(category);
-  };
-
+function LeftMenu(props) {
+  const location = useLocation();
   return (
     <div className="LeftMenu">
       <ul className="LeftMenu__MenuList">
-        <li onClick={() => selectedCategory("Mobiles")}>
+        <li onClick={() => props.selectedCategory("MobilePhones")}>
           <div className={"LeftMenu__MenuList__Container"}>
             <div className="LeftMenu__MenuList__Container__Item">
               <span>{Mobile} Mobile Phones</span>
               <span
                 className={`LeftMenu__MenuList__Container__Underline ${
-                  currentCategory === "Mobiles" ? "UnderlineOn" : null
+                  location.pathname === "/MobilePhones" ? "UnderlineOn" : null
                 }`}
               ></span>
             </div>
           </div>
           <div
             className={`LeftMenu__MenuList__Arrow ${
-              currentCategory === "Mobiles" ? "ArrowOn" : null
+              location.pathname === "/MobilePhones" ? "ArrowOn" : null
             }`}
           >
             {Arrow}
           </div>
         </li>
-        <li onClick={() => selectedCategory("Laptops")}>
+        <li onClick={() => props.selectedCategory("Laptops")}>
           <div className={"LeftMenu__MenuList__Container"}>
             <div className="LeftMenu__MenuList__Container__Item">
               <span>{Laptop} Laptops</span>
               <span
                 className={`LeftMenu__MenuList__Container__Underline ${
-                  currentCategory === "Laptops" ? "UnderlineOn" : null
+                  location.pathname === "/Laptops" ? "UnderlineOn" : null
                 }`}
               ></span>
             </div>
           </div>
           <div
             className={`LeftMenu__MenuList__Arrow ${
-              currentCategory === "Laptops" ? "ArrowOn" : null
+              location.pathname === "/Laptops" ? "ArrowOn" : null
             }`}
           >
             {Arrow}
           </div>
         </li>
-        <li onClick={() => selectedCategory("Tablets")}>
+        <li onClick={() => props.selectedCategory("Tablets")}>
           <div className={"LeftMenu__MenuList__Container"}>
             <div className="LeftMenu__MenuList__Container__Item">
               <span>{Tablet} Tablets</span>
               <span
                 className={`LeftMenu__MenuList__Container__Underline ${
-                  currentCategory === "Tablets" ? "UnderlineOn" : null
+                  location.pathname === "/Tablets" ? "UnderlineOn" : null
                 }`}
               ></span>
             </div>
           </div>
           <div
             className={`LeftMenu__MenuList__Arrow ${
-              currentCategory === "Tablets" ? "ArrowOn" : null
+              location.pathname === "/Tablets" ? "ArrowOn" : null
             }`}
           >
             {Arrow}
           </div>
         </li>
-        <li onClick={() => selectedCategory("Computer")}>
+        <li onClick={() => props.selectedCategory("ComputerAccessories")}>
           <div className={"LeftMenu__MenuList__Container"}>
             <div className="LeftMenu__MenuList__Container__Item">
               <span>{Computer} Computer Accessories</span>
               <span
                 className={`LeftMenu__MenuList__Container__Underline ${
-                  currentCategory === "Computer" ? "UnderlineOn" : null
+                  location.pathname === "/ComputerAccessories"
+                    ? "UnderlineOn"
+                    : null
                 }`}
               ></span>
             </div>
           </div>
           <div
             className={`LeftMenu__MenuList__Arrow ${
-              currentCategory === "Computer" ? "ArrowOn" : null
+              location.pathname === "/ComputerAccessories" ? "ArrowOn" : null
             }`}
           >
             {Arrow}
           </div>
         </li>
-        <li onClick={() => selectedCategory("Television")}>
+        <li onClick={() => props.selectedCategory("Television")}>
           <div className={"LeftMenu__MenuList__Container"}>
             <div className="LeftMenu__MenuList__Container__Item">
               <span>{Television} Television</span>
               <span
                 className={`LeftMenu__MenuList__Container__Underline ${
-                  currentCategory === "Television" ? "UnderlineOn" : null
+                  location.pathname === "/Television" ? "UnderlineOn" : null
                 }`}
               ></span>
             </div>
           </div>
           <div
             className={`LeftMenu__MenuList__Arrow ${
-              currentCategory === "Television" ? "ArrowOn" : null
+              location.pathname === "/Television" ? "ArrowOn" : null
             }`}
           >
             {Arrow}
           </div>
         </li>
-        <li onClick={() => selectedCategory("Network")}>
+        <li onClick={() => props.selectedCategory("NetworkProducts")}>
           <div className={"LeftMenu__MenuList__Container"}>
             <div className="LeftMenu__MenuList__Container__Item">
               <span>{Wifi} Networking Products</span>
               <span
                 className={`LeftMenu__MenuList__Container__Underline ${
-                  currentCategory === "Network" ? "UnderlineOn" : null
+                  location.pathname === "/NetworkProducts"
+                    ? "UnderlineOn"
+                    : null
                 }`}
               ></span>
             </div>
           </div>
           <div
             className={`LeftMenu__MenuList__Arrow ${
-              currentCategory === "Network" ? "ArrowOn" : null
+              location.pathname === "/NetworkProducts" ? "ArrowOn" : null
             }`}
           >
             {Arrow}
           </div>
         </li>
-        <li onClick={() => selectedCategory("Accessories")}>
+        <li onClick={() => props.selectedCategory("Accessories")}>
           <div className={"LeftMenu__MenuList__Container"}>
             <div className="LeftMenu__MenuList__Container__Item">
               <span>{Headphones} Accessories</span>
               <span
                 className={`LeftMenu__MenuList__Container__Underline ${
-                  currentCategory === "Accessories" ? "UnderlineOn" : null
+                  location.pathname === "/Accessories" ? "UnderlineOn" : null
                 }`}
               ></span>
             </div>
           </div>
           <div
             className={`LeftMenu__MenuList__Arrow ${
-              currentCategory === "Accessories" ? "ArrowOn" : null
+              location.pathname === "/Accessories" ? "ArrowOn" : null
             }`}
           >
             {Arrow}
           </div>
         </li>
-        <li onClick={() => selectedCategory("Gaming")}>
+        <li onClick={() => props.selectedCategory("GamingZone")}>
           <div className={"LeftMenu__MenuList__Container"}>
             <div className="LeftMenu__MenuList__Container__Item">
               <span>{Gamepad} Gaming Zone</span>
               <span
                 className={`LeftMenu__MenuList__Container__Underline ${
-                  currentCategory === "Gaming" ? "UnderlineOn" : null
+                  location.pathname === "/GamingZone" ? "UnderlineOn" : null
                 }`}
               ></span>
             </div>
           </div>
           <div
             className={`LeftMenu__MenuList__Arrow ${
-              currentCategory === "Gaming" ? "ArrowOn" : null
+              location.pathname === "/GamingZone" ? "ArrowOn" : null
             }`}
           >
             {Arrow}

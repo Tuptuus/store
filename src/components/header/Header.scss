@@ -3,8 +3,8 @@ $second-color: #13a79f;
 
 .Header {
   background-color: $base-color;
-  width: 100%;
-  height: 100px;
+  min-width: 100%;
+  min-height: 10vh;
   color: $second-color;
   display: flex;
   align-items: center;
@@ -63,6 +63,10 @@ $second-color: #13a79f;
       font-size: 24px;
       cursor: pointer;
       user-select: none;
+      transition: 0.2s;
+    }
+    &--search:hover {
+      background-color: #098882;
     }
   }
   &__Right {
@@ -72,11 +76,19 @@ $second-color: #13a79f;
     color: white;
     font-size: 30px;
     &__User {
+      transition: 0.2s;
       margin-left: 50px;
       cursor: pointer;
     }
     &__Trolley {
+      transition: 0.2s;
       cursor: pointer;
+    }
+    &__User:hover {
+      color: $second-color;
+    }
+    &__Trolley:hover {
+      color: $second-color;
     }
   }
 }

@@ -9,10 +9,10 @@ const MagnifyingGlass = <FontAwesomeIcon icon={faMagnifyingGlass} />;
 const ShoppingCart = <FontAwesomeIcon icon={faShoppingCart} />;
 const User = <FontAwesomeIcon icon={faUser} />;
 
-function Header() {
+function Header(props) {
   return (
     <div className="Header">
-      <div className="Header__Logo">
+      <div onClick={props.backToMainPage} className="Header__Logo">
         <span className="Header__Logo__TopLogo">Tup</span>
         <span className="Header__Logo__BottomLogo">Store</span>
       </div>
