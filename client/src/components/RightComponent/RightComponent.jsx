@@ -3,6 +3,7 @@ import "./RightComponent.css";
 import TopAd from "./mainPageAds/TopAd/TopAd";
 import BottomAds from "./mainPageAds/BottomAds/BottomAds";
 import { useLocation } from "react-router-dom";
+import MobilePhones from "./mobilePhones/MobilePhones";
 
 function RightComponent() {
   const location = useLocation();
@@ -14,7 +15,11 @@ function RightComponent() {
       </div>
     );
   } else if (location.pathname === "/MobilePhones") {
-    return <div className="RightComponentMobile">mobile phones</div>;
+    return (
+      <div className="RightComponentMobile">
+        <MobilePhones />
+      </div>
+    );
   } else if (location.pathname === "/Laptops") {
     return <div className="RightComponentLaptops">laptops</div>;
   } else if (location.pathname === "/Tablets") {
