@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const mobilePhonesModel = require("./models/mobilePhones");
+const laptopsModel = require("./models/laptops");
+const tabletsModel = require("./models/tablets");
 
 const cors = require("cors");
 
@@ -14,6 +16,24 @@ mongoose.connect(
 
 app.get("/getMobile", (req, res) => {
   mobilePhonesModel.find({}, (err, result) => {
+    if (err) {
+      res.json(err);
+    } else {
+      res.json(result);
+    }
+  });
+});
+app.get("/getLaptops", (req, res) => {
+  laptopsModel.find({}, (err, result) => {
+    if (err) {
+      res.json(err);
+    } else {
+      res.json(result);
+    }
+  });
+});
+app.get("/getTablets", (req, res) => {
+  tabletsModel.find({}, (err, result) => {
     if (err) {
       res.json(err);
     } else {

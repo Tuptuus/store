@@ -1,0 +1,99 @@
+.productsContainer {
+  border-top: 2px solid gray;
+  width: 100%;
+  height: 100%;
+  background-color: #1f1f22;
+  padding-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.productsContainer__overflowContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (300px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 300px);
+  grid-gap: 50px;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 780px;
+  overflow-y: scroll;
+  padding-bottom: 50px;
+}
+
+.productsContainer__overflowContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.productsContainer__Item {
+  padding: 8px;
+  color: white;
+  cursor: pointer;
+  width: 300px;
+  height: 450px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border-radius: 15px;
+  border-bottom: 1px solid gray;
+}
+
+.productsContainer__Item__Top__ImageContainer {
+  width: 100%;
+}
+
+.productsContainer__Item__Top__ImageContainer__Img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  max-width: 100%;
+}
+
+.productsContainer__Item__Bottom {
+  height: 190px;
+}
+
+.productsContainer__Item__Bottom__Title {
+  height: 50px;
+}
+
+.productsContainer__Item__Bottom__InfoContainer {
+  height: 100px;
+}
+
+.productsContainer__Item__Bottom__InfoContainer__Info {
+  font-size: 14px;
+}
+
+.productsContainer__Item__Bottom__PriceContainer {
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.productsContainer__Item__Bottom__PriceContainer__AddItem {
+  margin-left: 200px;
+  font-size: 30px;
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  position: absolute;
+}
+
+.productsContainer__Item:hover {
+  border-color: #13a79f;
+}
+
+.productsContainer__Item:hover .productsContainer__Item__Bottom__PriceContainer__AddItem {
+  opacity: 1;
+}
+/*# sourceMappingURL=products.css.map */

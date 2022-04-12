@@ -3,7 +3,9 @@ import "./RightComponent.css";
 import TopAd from "./mainPageAds/TopAd/TopAd";
 import BottomAds from "./mainPageAds/BottomAds/BottomAds";
 import { useLocation } from "react-router-dom";
-import MobilePhones from "./mobilePhones/MobilePhones";
+import MobilePhones from "./products/mobilePhones/MobilePhones";
+import Laptops from "./laptops/Laptops";
+import Tablets from "./products/tablets/Tablets";
 
 function RightComponent() {
   const location = useLocation();
@@ -16,14 +18,22 @@ function RightComponent() {
     );
   } else if (location.pathname === "/MobilePhones") {
     return (
-      <div className="RightComponentMobile">
+      <div className="RightComponentProducts">
         <MobilePhones />
       </div>
     );
   } else if (location.pathname === "/Laptops") {
-    return <div className="RightComponentLaptops">laptops</div>;
+    return (
+      <div className="RightComponentProducts">
+        <Laptops />
+      </div>
+    );
   } else if (location.pathname === "/Tablets") {
-    return <div className="RightComponentTablets">tablets</div>;
+    return (
+      <div className="RightComponentProducts">
+        <Tablets />
+      </div>
+    );
   } else if (location.pathname === "/ComputerAccessories") {
     return (
       <div className="RightComponentComputerAccessories">

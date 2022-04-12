@@ -15,4 +15,9 @@
           align-items: center;
   margin: 0;
 }
+
+.RightComponentProducts {
+  width: 100%;
+  min-height: 100%;
+}
 /*# sourceMappingURL=RightComponent.css.map */
