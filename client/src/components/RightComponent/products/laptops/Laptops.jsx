@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-function Laptops() {
+function Laptops(props) {
+  const { clickItem } = props;
   const [listOfLaptopsData, setListOfLaptopsData] = useState([]);
   useEffect(() => {
     const getData = async () => {
@@ -11,8 +12,11 @@ function Laptops() {
     getData();
   }, []);
   const listOfLaptops = listOfLaptopsData.map(
-    ({ Title, Price, Picture, Screen, Processor, System, Memory }) => (
-      <div className="productsContainer__Item">
+    ({ _id, Title, Price, Picture, Screen, Processor, System, Memory }) => (
+      <div
+        onClick={() => clickItem(_id, "Laptops")}
+        className="productsContainer__Item"
+      >
         <div className="productsContainer__Item__Top">
           <div className="productsContainer__Item__Top__ImageContainer">
             <img

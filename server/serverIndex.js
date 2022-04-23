@@ -1,4 +1,5 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 const app = express();
 const mongoose = require("mongoose");
 const mobilePhonesModel = require("./models/mobilePhones");
@@ -9,6 +10,8 @@ const cors = require("cors");
 
 app.use(express.json());
 app.use(cors());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 mongoose.connect(
   "mongodb+srv://Tuptuus:zaqwsX12@tupstore.wtkgi.mongodb.net/Store?retryWrites=true&w=majority"
@@ -23,17 +26,7 @@ app.get("/getMobile", (req, res) => {
     }
   });
 });
-app.get("/getMobileOne", (req, res) => {
-  let id = req.params.ide;
-  console.log(id);
-  mobilePhonesModel.find({ _id: id }, (err, result) => {
-    if (err) {
-      res.json(err);
-    } else {
-      res.json(result);
-    }
-  });
-});
+
 app.get("/getLaptops", (req, res) => {
   laptopsModel.find({}, (err, result) => {
     if (err) {
@@ -43,6 +36,7 @@ app.get("/getLaptops", (req, res) => {
     }
   });
 });
+
 app.get("/getTablets", (req, res) => {
   tabletsModel.find({}, (err, result) => {
     if (err) {
@@ -51,6 +45,36 @@ app.get("/getTablets", (req, res) => {
       res.json(result);
     }
   });
+});
+
+app.post("/getProduct", (req, res) => {
+  let id = req.body.productID;
+  let type = req.body.currentType;
+  if (type === "MobilePhones") {
+    mobilePhonesModel.find({ _id: id }, (err, result) => {
+      if (err) {
+        res.json(err);
+      } else {
+        console.log(res.json(result));
+      }
+    });
+  } else if (type === "Laptops") {
+    laptopsModel.find({ _id: id }, (err, result) => {
+      if (err) {
+        res.json(err);
+      } else {
+        console.log(res.json(result));
+      }
+    });
+  } else if (type === "Tablets") {
+    tabletsModel.find({ _id: id }, (err, result) => {
+      if (err) {
+        res.json(err);
+      } else {
+        console.log(res.json(result));
+      }
+    });
+  }
 });
 
 // ADD NEW PHONE TO DATABASE

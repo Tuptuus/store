@@ -6,34 +6,23 @@ import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 
 const cartPlusIcon = <FontAwesomeIcon icon={faShoppingBag} />;
-function MobilePhones() {
+function MobilePhones(props) {
+  const { clickItem } = props;
   const [listOfPhonesData, setListOfPhonesData] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get("http://localhost:3001/getMobileOne", {
-        ide: "625495781bbbf60c1d227799",
-      });
+      const response = await axios.get("http://localhost:3001/getMobile");
       setListOfPhonesData(response.data);
     };
     getData();
   }, []);
 
-  const clickItem = (itemID, type) => {
-    if (type === "Item") {
-      console.log(itemID);
-      console.log(type);
-      // navigate(`/MobilePhones/${itemID}`);
-    } else if (type === "Icon") {
-      console.log("witam");
-    }
-  };
-
   const listOfPhones = listOfPhonesData.map(
     ({ _id, Title, Price, Picture, Screen, Processor, System, Memory }) => (
       <div
-        onClick={() => clickItem(_id, "Item")}
+        onClick={() => clickItem(_id, "MobilePhones")}
         className="productsContainer__Item"
       >
         <div className="productsContainer__Item__Top">
@@ -66,10 +55,7 @@ function MobilePhones() {
           <div className="productsContainer__Item__Bottom__PriceContainer">
             <p>{Price}zł</p>
             <div className="productsContainer__Item__Bottom__PriceContainer__AddItem">
-              <span
-                onClick={() => clickItem(null, "Icon")}
-                className="productsContainer__Item__Bottom__PriceContainer__AddItem__Icon"
-              >
+              <span className="productsContainer__Item__Bottom__PriceContainer__AddItem__Icon">
                 {cartPlusIcon}
               </span>
             </div>

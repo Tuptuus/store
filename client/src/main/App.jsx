@@ -14,8 +14,12 @@ function App() {
           <Route path="MobilePhones" element={<MainPage />}>
             <Route path=":itemID" element={<MainPage />} />
           </Route>
-          <Route path="Laptops" element={<MainPage />} />
-          <Route path="Tablets" element={<MainPage />} />
+          <Route path="Laptops" element={<MainPage />}>
+            <Route path=":itemID" element={<MainPage />} />
+          </Route>
+          <Route path="Tablets" element={<MainPage />}>
+            <Route path=":itemID" element={<MainPage />} />
+          </Route>
           <Route path="ComputerAccessories" element={<MainPage />} />
           <Route path="Television" element={<MainPage />} />
           <Route path="NetworkProducts" element={<MainPage />} />
