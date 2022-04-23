@@ -11,8 +11,9 @@ function App() {
       <Routes>
         <Route path="/">
           <Route index element={<MainPage />} />
-          <Route path="e" element={<MainPage />} />
-          <Route path="MobilePhones" element={<MainPage />} />
+          <Route path="MobilePhones" element={<MainPage />}>
+            <Route path=":itemID" element={<MainPage />} />
+          </Route>
           <Route path="Laptops" element={<MainPage />} />
           <Route path="Tablets" element={<MainPage />} />
           <Route path="ComputerAccessories" element={<MainPage />} />

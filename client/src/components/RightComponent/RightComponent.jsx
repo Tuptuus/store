@@ -4,7 +4,7 @@ import TopAd from "./mainPageAds/TopAd/TopAd";
 import BottomAds from "./mainPageAds/BottomAds/BottomAds";
 import { useLocation } from "react-router-dom";
 import MobilePhones from "./products/mobilePhones/MobilePhones";
-import Laptops from "./laptops/Laptops";
+import Laptops from "./products/laptops/Laptops";
 import Tablets from "./products/tablets/Tablets";
 
 function RightComponent() {

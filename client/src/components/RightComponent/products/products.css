@@ -81,19 +81,23 @@
 }
 
 .productsContainer__Item__Bottom__PriceContainer__AddItem {
+  pointer-events: none;
+}
+
+.productsContainer__Item__Bottom__PriceContainer__AddItem__Icon {
+  pointer-events: all;
   margin-left: 200px;
   font-size: 30px;
   opacity: 0;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  position: absolute;
 }
 
 .productsContainer__Item:hover {
   border-color: #13a79f;
 }
 
-.productsContainer__Item:hover .productsContainer__Item__Bottom__PriceContainer__AddItem {
+.productsContainer__Item:hover .productsContainer__Item__Bottom__PriceContainer__AddItem__Icon {
   opacity: 1;
 }
 /*# sourceMappingURL=products.css.map */

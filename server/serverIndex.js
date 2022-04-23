@@ -23,6 +23,17 @@ app.get("/getMobile", (req, res) => {
     }
   });
 });
+app.get("/getMobileOne", (req, res) => {
+  let id = req.params.ide;
+  console.log(id);
+  mobilePhonesModel.find({ _id: id }, (err, result) => {
+    if (err) {
+      res.json(err);
+    } else {
+      res.json(result);
+    }
+  });
+});
 app.get("/getLaptops", (req, res) => {
   laptopsModel.find({}, (err, result) => {
     if (err) {

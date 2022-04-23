@@ -3,30 +3,39 @@ import axios from "axios";
 import "../products.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const cartPlusIcon = <FontAwesomeIcon icon={faShoppingBag} />;
 function MobilePhones() {
   const [listOfPhonesData, setListOfPhonesData] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get("http://localhost:3001/getMobile");
+      const response = await axios.get("http://localhost:3001/getMobileOne", {
+        ide: "625495781bbbf60c1d227799",
+      });
       setListOfPhonesData(response.data);
-      console.log(response.data);
     };
     getData();
   }, []);
 
-  const clickIcon = () => {
-    console.log("Icon click");
-  };
-  const clickItem = () => {
-    console.log("Item click");
+  const clickItem = (itemID, type) => {
+    if (type === "Item") {
+      console.log(itemID);
+      console.log(type);
+      // navigate(`/MobilePhones/${itemID}`);
+    } else if (type === "Icon") {
+      console.log("witam");
+    }
   };
 
   const listOfPhones = listOfPhonesData.map(
-    ({ Title, Price, Picture, Screen, Processor, System, Memory }) => (
-      <div onClick={clickItem} className="productsContainer__Item">
+    ({ _id, Title, Price, Picture, Screen, Processor, System, Memory }) => (
+      <div
+        onClick={() => clickItem(_id, "Item")}
+        className="productsContainer__Item"
+      >
         <div className="productsContainer__Item__Top">
           <div className="productsContainer__Item__Top__ImageContainer">
             <img
@@ -56,12 +65,14 @@ function MobilePhones() {
           </div>
           <div className="productsContainer__Item__Bottom__PriceContainer">
             <p>{Price}zł</p>
-            <span
-              onClick={clickIcon}
-              className="productsContainer__Item__Bottom__PriceContainer__AddItem"
-            >
-              {cartPlusIcon}
-            </span>
+            <div className="productsContainer__Item__Bottom__PriceContainer__AddItem">
+              <span
+                onClick={() => clickItem(null, "Icon")}
+                className="productsContainer__Item__Bottom__PriceContainer__AddItem__Icon"
+              >
+                {cartPlusIcon}
+              </span>
+            </div>
           </div>
         </div>
       </div>

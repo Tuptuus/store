@@ -25,24 +25,25 @@ const Wifi = <FontAwesomeIcon icon={faWifi} />;
 const Arrow = <FontAwesomeIcon icon={faAngleRight} />;
 
 function LeftMenu(props) {
+  const { selectedCategory, currentCategory } = props;
   const location = useLocation();
   return (
     <div className="LeftMenu">
       <ul className="LeftMenu__MenuList">
-        <li onClick={() => props.selectedCategory("MobilePhones")}>
+        <li onClick={() => selectedCategory("MobilePhones")}>
           <div className={"LeftMenu__MenuList__Container"}>
             <div className="LeftMenu__MenuList__Container__Item">
               <span>{Mobile} Mobile Phones</span>
               <span
                 className={`LeftMenu__MenuList__Container__Underline ${
-                  location.pathname === "/MobilePhones" ? "UnderlineOn" : null
+                  currentCategory === "MobilePhones" ? "UnderlineOn" : null
                 }`}
               ></span>
             </div>
           </div>
           <div
             className={`LeftMenu__MenuList__Arrow ${
-              location.pathname === "/MobilePhones" ? "ArrowOn" : null
+              currentCategory === "MobilePhones" ? "ArrowOn" : null
             }`}
           >
             {Arrow}
@@ -54,14 +55,14 @@ function LeftMenu(props) {
               <span>{Laptop} Laptops</span>
               <span
                 className={`LeftMenu__MenuList__Container__Underline ${
-                  location.pathname === "/Laptops" ? "UnderlineOn" : null
+                  currentCategory === "Laptops" ? "UnderlineOn" : null
                 }`}
               ></span>
             </div>
           </div>
           <div
             className={`LeftMenu__MenuList__Arrow ${
-              location.pathname === "/Laptops" ? "ArrowOn" : null
+              currentCategory === "Laptops" ? "ArrowOn" : null
             }`}
           >
             {Arrow}
@@ -73,14 +74,14 @@ function LeftMenu(props) {
               <span>{Tablet} Tablets</span>
               <span
                 className={`LeftMenu__MenuList__Container__Underline ${
-                  location.pathname === "/Tablets" ? "UnderlineOn" : null
+                  currentCategory === "Tablets" ? "UnderlineOn" : null
                 }`}
               ></span>
             </div>
           </div>
           <div
             className={`LeftMenu__MenuList__Arrow ${
-              location.pathname === "/Tablets" ? "ArrowOn" : null
+              currentCategory === "Tablets" ? "ArrowOn" : null
             }`}
           >
             {Arrow}
@@ -92,7 +93,7 @@ function LeftMenu(props) {
               <span>{Computer} Computer Accessories</span>
               <span
                 className={`LeftMenu__MenuList__Container__Underline ${
-                  location.pathname === "/ComputerAccessories"
+                  currentCategory === "ComputerAccessories"
                     ? "UnderlineOn"
                     : null
                 }`}
@@ -101,7 +102,7 @@ function LeftMenu(props) {
           </div>
           <div
             className={`LeftMenu__MenuList__Arrow ${
-              location.pathname === "/ComputerAccessories" ? "ArrowOn" : null
+              currentCategory === "ComputerAccessories" ? "ArrowOn" : null
             }`}
           >
             {Arrow}
@@ -113,14 +114,14 @@ function LeftMenu(props) {
               <span>{Television} Television</span>
               <span
                 className={`LeftMenu__MenuList__Container__Underline ${
-                  location.pathname === "/Television" ? "UnderlineOn" : null
+                  currentCategory === "Television" ? "UnderlineOn" : null
                 }`}
               ></span>
             </div>
           </div>
           <div
             className={`LeftMenu__MenuList__Arrow ${
-              location.pathname === "/Television" ? "ArrowOn" : null
+              currentCategory === "Television" ? "ArrowOn" : null
             }`}
           >
             {Arrow}
@@ -132,16 +133,14 @@ function LeftMenu(props) {
               <span>{Wifi} Networking Products</span>
               <span
                 className={`LeftMenu__MenuList__Container__Underline ${
-                  location.pathname === "/NetworkProducts"
-                    ? "UnderlineOn"
-                    : null
+                  currentCategory === "NetworkProducts" ? "UnderlineOn" : null
                 }`}
               ></span>
             </div>
           </div>
           <div
             className={`LeftMenu__MenuList__Arrow ${
-              location.pathname === "/NetworkProducts" ? "ArrowOn" : null
+              currentCategory === "NetworkProducts" ? "ArrowOn" : null
             }`}
           >
             {Arrow}
@@ -153,14 +152,14 @@ function LeftMenu(props) {
               <span>{Headphones} Accessories</span>
               <span
                 className={`LeftMenu__MenuList__Container__Underline ${
-                  location.pathname === "/Accessories" ? "UnderlineOn" : null
+                  currentCategory === "Accessories" ? "UnderlineOn" : null
                 }`}
               ></span>
             </div>
           </div>
           <div
             className={`LeftMenu__MenuList__Arrow ${
-              location.pathname === "/Accessories" ? "ArrowOn" : null
+              currentCategory === "Accessories" ? "ArrowOn" : null
             }`}
           >
             {Arrow}
@@ -172,14 +171,14 @@ function LeftMenu(props) {
               <span>{Gamepad} Gaming Zone</span>
               <span
                 className={`LeftMenu__MenuList__Container__Underline ${
-                  location.pathname === "/GamingZone" ? "UnderlineOn" : null
+                  currentCategory === "GamingZone" ? "UnderlineOn" : null
                 }`}
               ></span>
             </div>
           </div>
           <div
             className={`LeftMenu__MenuList__Arrow ${
-              location.pathname === "/GamingZone" ? "ArrowOn" : null
+              currentCategory === "GamingZone" ? "ArrowOn" : null
             }`}
           >
             {Arrow}

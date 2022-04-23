@@ -60,11 +60,14 @@ $second-color: #13a79f;
         height: 40px;
         display: flex;
         &__AddItem {
-          margin-left: 200px;
-          font-size: 30px;
-          opacity: 0;
-          transition: 0.2s;
-          position: absolute;
+          pointer-events: none;
+          &__Icon {
+            pointer-events: all;
+            margin-left: 200px;
+            font-size: 30px;
+            opacity: 0;
+            transition: 0.2s;
+          }
         }
       }
     }
@@ -72,7 +75,8 @@ $second-color: #13a79f;
   &__Item:hover {
     border-color: $second-color;
   }
-  &__Item:hover .productsContainer__Item__Bottom__PriceContainer__AddItem {
+  &__Item:hover
+    .productsContainer__Item__Bottom__PriceContainer__AddItem__Icon {
     opacity: 1;
   }
 }
