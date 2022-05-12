@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./RightComponent.css";
 import TopAd from "./mainPageAds/TopAd/TopAd";
 import BottomAds from "./mainPageAds/BottomAds/BottomAds";
@@ -12,6 +12,21 @@ function RightComponent() {
   const navigate = useNavigate();
   const [currentItemID, setCurrentItemID] = useState("");
   const [currentTypeOfProducts, setCurrentTypeOfProducts] = useState("");
+
+  useEffect(() => {
+    setCurrentItemID(JSON.parse(window.localStorage.getItem("currentItemID")));
+    setCurrentTypeOfProducts(
+      JSON.parse(window.localStorage.getItem("currentTypeOfProducts"))
+    );
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("currentItemID", JSON.stringify(currentItemID));
+    window.localStorage.setItem(
+      "currentTypeOfProducts",
+      JSON.stringify(currentTypeOfProducts)
+    );
+  }, [currentItemID, currentTypeOfProducts]);
 
   const clickItem = (itemID, page) => {
     setCurrentItemID(itemID);

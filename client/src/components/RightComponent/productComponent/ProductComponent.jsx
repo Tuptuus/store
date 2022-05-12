@@ -13,9 +13,8 @@ function ProductComponent(props) {
       setCurrentProduct(response.data);
     };
     getData();
-  }, [currentItemID]);
-  // console.log(currentProduct);
-  console.log(currentItemID);
+    console.log("działa");
+  }, [currentItemID, currentTypeOfProducts]);
 
   const product = currentProduct.map(
     ({
@@ -40,10 +39,10 @@ function ProductComponent(props) {
             <p className="productContainer__Top__Middle__Title">{Title}</p>
             <p className="productContainer__Top__Middle__Info">
               {System ? <p>System:{System}</p> : null}
-              {Screen ? <p>Screen:{Screen}</p> : null}
+              {Screen ? <p>Screen:{Screen}"</p> : null}
               {Processor ? <p>Processor:{Processor}</p> : null}
-              {Memory ? <p>Memory:{Memory}</p> : null}
-              {RAM ? <p>RAM:{RAM}</p> : null}
+              {Memory ? <p>Memory:{Memory}GB</p> : null}
+              {RAM ? <p>RAM:{RAM}GB</p> : null}
               {Graphics ? <p>Graphics:{Graphics}</p> : null}
             </p>
           </div>
