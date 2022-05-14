@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../header/Header";
 import LeftMenu from "../LeftMenu/LeftMenu";
@@ -8,6 +8,19 @@ import "./MainPage.css";
 function MainPage() {
   const [currentCategory, setCurrentCategory] = useState("");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setCurrentCategory(
+      JSON.parse(window.localStorage.getItem("currentCategory"))
+    );
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem(
+      "currentCategory",
+      JSON.stringify(currentCategory)
+    );
+  }, [currentCategory]);
 
   const selectedCategory = (category) => {
     setCurrentCategory(category);

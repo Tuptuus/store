@@ -36,9 +36,12 @@
 }
 
 .productsContainer__Item {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   padding: 8px;
   color: white;
-  cursor: pointer;
   width: 300px;
   height: 450px;
   -webkit-transition: 0.2s;
@@ -78,26 +81,43 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
-.productsContainer__Item__Bottom__PriceContainer__AddItem {
-  pointer-events: none;
+.productsContainer__Item--Click {
+  cursor: pointer;
 }
 
-.productsContainer__Item__Bottom__PriceContainer__AddItem__Icon {
-  pointer-events: all;
-  margin-left: 200px;
-  font-size: 30px;
-  opacity: 0;
+.productsContainer__Item__AddContainer {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -50px;
+  margin-left: 230px;
+}
+
+.productsContainer__Item__AddContainer__Icon {
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  opacity: 0;
+  font-size: 34px;
+  cursor: pointer;
 }
 
 .productsContainer__Item:hover {
   border-color: #13a79f;
 }
 
-.productsContainer__Item:hover .productsContainer__Item__Bottom__PriceContainer__AddItem__Icon {
+.productsContainer__Item:hover .productsContainer__Item__AddContainer__Icon {
   opacity: 1;
 }
 
@@ -145,6 +165,122 @@
 
 .productContainer__Top__Right {
   width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.productContainer__Top__Right__BuyContainer {
+  height: 70%;
+  width: 70%;
+  border-radius: 20px;
+  border: 2px solid gray;
+}
+
+.productContainer__Top__Right__BuyContainer__Main {
+  height: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.productContainer__Top__Right__BuyContainer__Main__Under {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.productContainer__Top__Right__BuyContainer__Main p {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.productContainer__Top__Right__BuyContainer__Main__SelectAmount {
+  background-color: transparent;
+  color: white;
+  border: 2px solid gray;
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  padding-left: 25px;
+  outline: none;
+  font-size: 17px;
+}
+
+.productContainer__Top__Right__BuyContainer__Main__SelectAmount option {
+  background-color: #1f1f22;
+  font-size: 17px;
+  margin-top: 10px;
+}
+
+.productContainer__Top__Right__BuyContainer__Main__Btn {
+  color: white;
+  outline: none;
+  background-color: #13a79f;
+  font-size: 25px;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  border-radius: 10px;
+  margin-left: 10px;
+  line-height: 40px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.productContainer__Top__Right__BuyContainer__Main__BtnDisable {
+  color: white;
+  outline: none;
+  background-color: gray;
+  font-size: 25px;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  border-radius: 10px;
+  margin-left: 10px;
+  line-height: 40px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.productContainer__Top__Right__BuyContainer__InfoContainer {
+  height: 60%;
+}
+
+.productContainer__Top__Right__BuyContainer__InfoContainer__Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+  border-top: 2px solid gray;
+  padding: 20px 0 20px 0;
+}
+
+.productContainer__Top__Right__BuyContainer__InfoContainer__Info__Left {
+  padding-left: 15px;
+}
+
+.productContainer__Top__Right__BuyContainer__InfoContainer__Info__Right {
+  padding-left: 15px;
 }
 
 .productContainer__Bottom {

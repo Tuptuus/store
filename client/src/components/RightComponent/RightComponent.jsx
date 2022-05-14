@@ -29,17 +29,22 @@ function RightComponent() {
   }, [currentItemID, currentTypeOfProducts]);
 
   const clickItem = (itemID, page) => {
+    console.log("es");
     setCurrentItemID(itemID);
     if (page === "MobilePhones") {
       setCurrentTypeOfProducts("MobilePhones");
       navigate(`/MobilePhones/${itemID}`);
     } else if (page === "Laptops") {
       setCurrentTypeOfProducts("Laptops");
-      navigate(`/Laptops/${itemID}`);
+      // navigate(`/Laptops/${itemID}`);
     } else if (page === "Tablets") {
       setCurrentTypeOfProducts("Tablets");
-      navigate(`/Tablets/${itemID}`);
+      // navigate(`/Tablets/${itemID}`);
     }
+  };
+
+  const clickBagIcon = (itemID) => {
+    console.log(`dodano ${itemID}`);
   };
 
   const location = useLocation();
@@ -53,7 +58,7 @@ function RightComponent() {
   } else if (location.pathname === "/MobilePhones") {
     return (
       <div className="RightComponentProducts">
-        <MobilePhones clickItem={clickItem} />
+        <MobilePhones clickItem={clickItem} clickBagIcon={clickBagIcon} />
       </div>
     );
   } else if (location.pathname === "/Laptops") {
